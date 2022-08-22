@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+         docker { image 'node:16-alpine' }
+    }
     
     environment {
         SURGE_TOKEN = 'b5ddb0f207922e6adb34f67a69b720ad'
