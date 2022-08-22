@@ -17,11 +17,11 @@ pipeline {
                 sh "npm run build"
             }
         }
-        .stage("Deploy") {
-            steps {
-                sh "npm install -g surge"
-                sh "surge build uzair-jenkins-pipeline.surge.sh ${SURGE_TOKEN}"
-            }
-        }
+        // stage("Deploy") {
+        //     steps {
+        //         sh "npm install -g surge"
+        //         sh "surge build uzair-jenkins-pipeline.surge.sh ${SURGE_TOKEN}"
+        //     }
+        // }
     }
 }
