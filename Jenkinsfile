@@ -7,7 +7,7 @@ pipeline {
     }
     
     environment {
-        SURGE_TOKEN = 'b5ddb0f207922e6adb34f67a69b720ad'
+        SURGE_TOKEN = ''
     }
     
     stages {
@@ -17,7 +17,7 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage("Deploy") {
+        .stage("Deploy") {
             steps {
                 sh "npm install -g surge"
                 sh "surge build uzair-jenkins-pipeline.surge.sh ${SURGE_TOKEN}"
